@@ -23,7 +23,7 @@ class PreferencesManager(private val context: Context) {
         return data[preferencesKey] ?: ""
     }
 
-    suspend fun remove(key: String, value: String) {
+    suspend fun remove(key: String) {
         val preferencesKey = stringPreferencesKey(key)
         context.dataStore.edit { pref -> pref.remove(preferencesKey)}
     }
