@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             findViewById<TextView>(R.id.textView_one).text = "Salvando valores..."
             delay(2000)
-            prefManager.save("key", "Armazenabdo valor")
+            prefManager.save("key", "Armazenando valor")
             val value = prefManager.read("")
             findViewById<TextView>(R.id.textView_one).text = value
             delay(2000)
